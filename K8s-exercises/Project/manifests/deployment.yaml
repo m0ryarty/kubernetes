@@ -13,4 +13,4 @@ spec:
     spec:
       containers:
       - name: project
-        image: moryarty/project:v0.21
+        image: moryarty/project:v0.22
