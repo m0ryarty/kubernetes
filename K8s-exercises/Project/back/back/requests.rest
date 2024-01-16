@@ -1,0 +1,21 @@
+GET http://localhost:3000/api/todos HTTP/1.1
+
+###
+POST http://localhost:3000/api/todos HTTP/1.1
+content-type: application/json
+
+{
+    "todo": "nada a fazer!",
+    "checked": false
+}
+
+###
+PUT http://localhost:3000/api/todos/2 HTTP/1.1
+content-type: application/json
+
+{
+   "checked": true 
+}
+
+###
+DELETE http://localhost:3000/api/todos/1 HTTP/1.1

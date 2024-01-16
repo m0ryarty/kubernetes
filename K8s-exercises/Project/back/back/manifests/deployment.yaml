@@ -1,16 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: project
+  name: todo
 spec:
   selector:
     matchLabels:
-      app: project
+      app: todo
   template:
     metadata:
       labels:
-        app: project
+        app: todo
     spec:
       containers:
-      - name: project
-        image: moryarty/project:v0.21
+      - name: todo
+        image: moryarty/1a2bmoryarty:todo
+
