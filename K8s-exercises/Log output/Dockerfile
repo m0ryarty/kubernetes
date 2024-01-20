@@ -7,4 +7,4 @@ RUN npm install
 
 COPY . .
 
-CMD node logOutput.js
+CMD node index.js

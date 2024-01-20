@@ -13,4 +13,4 @@ spec:
     spec:
       containers:
       - name: log-output
-        image: moryarty/1a2bmoryarty:log-output
+        image: moryarty/log-output:v0.1
