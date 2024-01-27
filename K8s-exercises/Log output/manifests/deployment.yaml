@@ -1,8 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: log-output
+  name: log-output-dep
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: log-output
@@ -11,6 +12,17 @@ spec:
       labels:
         app: log-output
     spec:
+      volumes:
+      - name: shared-date
+        emptyDir: {}
       containers:
-      - name: log-output
-        image: moryarty/log-output:v0.1
+      - name: time-output
+        image: moryarty/time-output:v0.2
+        volumeMounts:
+        - name: shared-date
+          mountPath: /usr/src/app/files
+      - name: hash-output
+        image: moryarty/hash-output:v0.2
+        volumeMounts:
+        - name: shared-date
+          mountPath: /usr/src/app/files
