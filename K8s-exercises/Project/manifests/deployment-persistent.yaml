@@ -14,7 +14,8 @@ spec:
     spec:
       volumes:
       - name: shared-project
-        emptyDir: {}
+        persistentVolumeClaim:
+          claimName: project-claim
       containers:
       - name: project
         image: moryarty/project:v0.6

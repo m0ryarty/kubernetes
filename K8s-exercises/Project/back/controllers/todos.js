@@ -1,11 +1,18 @@
 const router = require('express').Router()
 
+const allTodos = require('../data/todosData')
+
+const { saveActualImage } = require('../middlewares/image_finder')
 const Todo = require('../models/todos')
 
 
 
-router.get('/', async (req, res) => {
-    const todos = await Todo.findAll()
+router.get('/',  async (req, res) => {
+      
+    await saveActualImage()
+    
+    const todos = allTodos
+   /*  const todos = await Todo.findAll() */
     res.send(todos)
 })
 
