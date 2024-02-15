@@ -18,7 +18,7 @@ spec:
           claimName: project-claim
       containers:
       - name: project
-        image: moryarty/project:v0.6
+        image: moryarty/project:v0.7
         volumeMounts:
         - name: shared-project
           mountPath: /usr/src/app/files
