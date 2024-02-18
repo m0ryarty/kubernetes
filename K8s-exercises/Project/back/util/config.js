@@ -6,5 +6,5 @@ module.exports = {
   PGPASSWORD:process.env.PGPASSWORD,  
   PGHOST:process.env.PGHOST,  
   SECRET: process.env.SECRET,
-  PORT: process.env.PORT || 3000,
+  PORT: process.env.PORT || 3003,
 }

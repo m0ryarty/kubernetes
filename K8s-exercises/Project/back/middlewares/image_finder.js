@@ -3,7 +3,7 @@ const fs = require('fs')
 const axios = require('axios')
 const { isToday } = require("date-fns")
 
-const directory = path.join('/', 'usr', 'src', 'app', 'files')
+const directory = path.join('./', 'files')
 const filePath = path.join(directory, 'image.jpg')
 
 const fileAlreadyExists = async () => new Promise(res => {

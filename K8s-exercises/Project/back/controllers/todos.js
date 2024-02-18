@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-const allTodos = require('../data/todosData')
+let allTodos = require('../data/todosData')
 
 const { saveActualImage } = require('../middlewares/image_finder')
 const Todo = require('../models/todos')
@@ -19,8 +19,11 @@ router.get('/',  async (req, res) => {
 
 router.post('/', async (req, res) => {
     
-    const todo = await Todo.create(req.body)
-    res.json(todo)
+    const newTodo = { ...req.body, checked: false }
+    
+    
+    allTodos = [ ...allTodos, newTodo ]    
+    res.send(allTodos)
 })
 
 

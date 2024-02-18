@@ -3,7 +3,7 @@ const app = express()
 const {  connectToDatabase} = require('./util/db')
 const { PORT } = require('./util/config')
 const { directory } = require('./middlewares/image_finder')
-const path = require('path')
+const cors = require('cors')
 
 
 
@@ -11,7 +11,8 @@ const todosRouter = require('./controllers/todos')
 
 app.use(express.json())
 
-app.use(express.static('build'))
+app.use(cors())
+
 app.use(express.static(directory))
 
 

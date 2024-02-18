@@ -1,4 +1,4 @@
-const todos = [
+let todos = [
     {
     "todo": "all things to do",
     "checked": true
