@@ -17,4 +17,3 @@ spec:
         image: moryarty/project-backend:v0.1
       - name: project-frontend
         image: moryarty/project-frontend:v0.1
-
