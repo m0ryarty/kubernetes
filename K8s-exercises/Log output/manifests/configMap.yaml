@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: log-output
+  name: log-output-configmap
+data:
+  hello_message: 'Hello!'
